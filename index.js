@@ -33,9 +33,10 @@ $(document).ready(function ($) {
         $('.mainView').removeClass('vanished');
     }
 
-    console.log($('#img-link-input'));
     $('#img-link-input').on('input', function () {
-        console.log($('#img-link-output'));
+        var imgLink = $('#img-link-input').val();
+        console.log(imgLink);
+        $('#img-link-output').attr('href', 'index.html#' + imgLink);
         $('#img-link-output').removeClass('hidden');
     });
 });
